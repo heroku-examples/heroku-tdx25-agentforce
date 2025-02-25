@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "src-org",
+      "default": true
+    }
+  ],
+  "name": "heroku-tdx25-agentforce",
+  "namespace": "",
+  "sfdcLoginUrl": "https://login.salesforce.com",
+  "sourceApiVersion": "62.0"
+}

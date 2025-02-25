@@ -1,0 +1,333 @@
+openapi: 3.0.1
+info:
+  title: OpenAPI definition
+  version: v0
+servers:
+- url: http://localhost:8080
+  description: Generated server url
+tags:
+- name: Carbon Footprint Calculation
+  description: "Calculates the carbon footprint for a given flight based on real-time\
+    \ Salesforce data, including checked-in passengers."
+- name: Finance Agreement Calculation
+  description: "Calculates finance agreements for car purchases based on valuation,\
+    \ credit status, and business margins."
+- name: Shipping Calculation
+  description: Calculates the shipping options for a product given external data.
+paths:
+  /api/social/renderCard:
+    post:
+      tags:
+      - Services for Managing Social Cards for Marketing Campaigns
+      summary: Renders a custom social card for marketing campaigns.
+      operationId: renderCard
+      requestBody:
+        description: Use the line1 and line2 properites to customize
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/RenderCardRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/RenderCardResponse"
+  /api/shipping/calculateShippingOptions:
+    post:
+      tags:
+      - Shipping Calculation
+      summary: Calculate Shipping Options
+      description: Calculates the shipping options for a product given external data.
+      operationId: calculateShippingOptions
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CalculateShippingOptionsRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/CalculateShippingOptionsResponse"
+  /api/finance/calculateFinanceAgreement:
+    post:
+      tags:
+      - Finance Agreement Calculation
+      summary: Calculate a Finance Agreement
+      description: "Processes a finance agreement based on car valuation, customer\
+        \ credit profile, business margin constraints, and competitor pricing."
+      operationId: calculateFinanceAgreement
+      requestBody:
+        description: "Request to compute a finance agreement for a car purchase, including\
+          \ the Salesforce record ID of both the customer applying for financing and\
+          \ the vehicle being financed."
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/FinanceCalculationRequest"
+        required: true
+      responses:
+        "200":
+          description: Response containing the calculated finance agreement.
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/FinanceCalculationResponse"
+        "404":
+          description: Vehicle not found in Salesforce.
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/FinanceCalculationResponse"
+        "503":
+          description: Salesforce connection error.
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/FinanceCalculationResponse"
+        "500":
+          description: Unexpected server error.
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/FinanceCalculationResponse"
+  /api/carbon/calculateCarbonFootprint:
+    post:
+      tags:
+      - Carbon Footprint Calculation
+      summary: Calculate Carbon Footprint
+      description: Calculates the carbon footprint for a given flight using real DEFRA
+        2023 factors and live Salesforce passenger data.
+      operationId: calculateCarbonFootprint
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/CarbonFootprintRequest"
+        required: true
+      responses:
+        "200":
+          description: OK
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/CarbonFootprintResponse"
+components:
+  schemas:
+    RenderCardRequest:
+      type: object
+      properties:
+        line1:
+          type: string
+        line2:
+          type: string
+      description: Request to customize the rendering of the social card.
+    RenderCardResponse:
+      type: object
+      properties:
+        socialCard:
+          type: string
+      description: Response from rendering social card contains base64 encoded png
+        image.
+    CalculateShippingOptionsRequest:
+      type: object
+      properties:
+        productId:
+          type: string
+          description: The Salesforce record ID of the product.
+          example: PROD123456
+      description: "Request to determine shipping options for a product, including\
+        \ the Salesforce record ID of the product being shipped."
+    CalculateShippingOptionsResponse:
+      type: object
+      properties:
+        product:
+          $ref: "#/components/schemas/ProductInfo"
+        shippingOptions:
+          type: array
+          items:
+            $ref: "#/components/schemas/ShippingOption"
+        recommendedOption:
+          $ref: "#/components/schemas/ShippingOption"
+        timestamp:
+          type: string
+        units:
+          type: object
+          additionalProperties:
+            type: string
+      description: Response containing the calculated shipping options for the given
+        product. Describe the results in natural language text to the user.
+    Dimensions:
+      type: object
+      properties:
+        length:
+          type: number
+          format: double
+        width:
+          type: number
+          format: double
+        height:
+          type: number
+          format: double
+      description: Product dimensions in centimeters.
+    ProductInfo:
+      type: object
+      properties:
+        productId:
+          type: string
+        name:
+          type: string
+        weight:
+          type: number
+          format: double
+        dimensions:
+          $ref: "#/components/schemas/Dimensions"
+        category:
+          type: string
+        price:
+          type: number
+          format: double
+      description: Product details including weight and dimensions.
+    ShippingOption:
+      type: object
+      properties:
+        carrier:
+          type: string
+        service:
+          type: string
+        estimatedDeliveryDays:
+          type: integer
+          format: int32
+        cost:
+          type: number
+          format: double
+        carbonFootprint:
+          type: number
+          format: double
+      description: Available shipping options for the product.
+    FinanceCalculationRequest:
+      type: object
+      properties:
+        customerId:
+          type: string
+          description: The Salesforce record ID of the customer applying for financing.
+          example: 0035g00000XyZbHAZ
+        vehicleId:
+          type: string
+          description: The Salesforce record ID of the car being financed.
+          example: a0B5g00000LkVnWEAV
+        maxInterestRate:
+          type: number
+          description: The maximum interest rate the user is prepared to go to (percentage).
+          format: double
+          example: 3.5
+        downPayment:
+          type: number
+          description: The down payment the user is prepared to give.
+          format: double
+          example: 1000
+        years:
+          type: integer
+          description: The number of years to pay the finance the user is requesting.
+          format: int32
+          example: 3
+      description: "Request to compute a finance agreement for a car purchase, including\
+        \ the Salesforce record ID of both the customer applying for financing and\
+        \ the vehicle being financed."
+    FinanceCalculationResponse:
+      type: object
+      properties:
+        recommendedFinanceOffer:
+          $ref: "#/components/schemas/FinanceOffer"
+      description: Response containing the calculated finance agreement.
+    FinanceOffer:
+      type: object
+      properties:
+        finalCarPrice:
+          type: number
+          format: double
+        adjustedInterestRate:
+          type: number
+          format: double
+        monthlyPayment:
+          type: number
+          format: double
+        loanTermMonths:
+          type: integer
+          format: int32
+        totalFinancingCost:
+          type: number
+          format: double
+      description: Recommended finance offer based on business rules and customer
+        affordability.
+    CarbonFootprintRequest:
+      type: object
+      properties:
+        flightId:
+          type: string
+      description: Request to calculate the carbon footprint of a flight.
+    CarbonFootprintResponse:
+      type: object
+      properties:
+        flight:
+          $ref: "#/components/schemas/FlightInfo"
+        emissions:
+          $ref: "#/components/schemas/EmissionsData"
+        methodology:
+          $ref: "#/components/schemas/Methodology"
+        timestamp:
+          type: string
+        units:
+          type: object
+          additionalProperties:
+            type: string
+      description: Response containing the calculated carbon footprint for the flight.
+    EmissionsData:
+      type: object
+      properties:
+        totalCo2Kg:
+          type: number
+          format: double
+        co2PerPassengerKg:
+          type: number
+          format: double
+        co2PerKmKg:
+          type: number
+          format: double
+      description: Carbon emissions data for the flight.
+    FlightInfo:
+      type: object
+      properties:
+        flightNumber:
+          type: string
+        departureAirport:
+          type: string
+        arrivalAirport:
+          type: string
+        distanceKm:
+          type: integer
+          format: int32
+        passengerCount:
+          type: integer
+          format: int32
+      description: Flight information details.
+    Methodology:
+      type: object
+      properties:
+        calculationBasis:
+          type: string
+        fuelToCo2Ratio:
+          type: number
+          format: double
+        radiativeForcingMultiplier:
+          type: number
+          format: double
+        dataSource:
+          type: string
+      description: Details about the methodology used for emissions calculation.

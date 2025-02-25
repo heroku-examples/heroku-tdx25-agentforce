@@ -1,0 +1,13 @@
+{
+    "name": "Heroku Agentforce Actions",
+    "description": "A set of actions for retail, travel and automative agents",
+    "addons": ["heroku-integration"],
+    "buildpacks": [
+        {
+          "url": "https://github.com/heroku/heroku-buildpack-heroku-integration-service-mesh"
+        },
+        {
+          "url": "heroku/java"
+        }
+    ]
+}
