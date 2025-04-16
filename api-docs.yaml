@@ -106,6 +106,8 @@ paths:
         2023 factors and live Salesforce passenger data.
       operationId: calculateCarbonFootprint
       requestBody:
+        description: "Request to calculate the carbon footprint of a flight, using\
+          \ its Salesforce record ID."
         content:
           application/json:
             schema:
@@ -113,7 +115,25 @@ paths:
         required: true
       responses:
         "200":
-          description: OK
+          description: Response containing the carbon footprint summary for the flight.
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/CarbonFootprintResponse"
+        "404":
+          description: Flight not found in Salesforce.
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/CarbonFootprintResponse"
+        "503":
+          description: Salesforce connection error.
+          content:
+            '*/*':
+              schema:
+                $ref: "#/components/schemas/CarbonFootprintResponse"
+        "500":
+          description: Unexpected server error.
           content:
             '*/*':
               schema:

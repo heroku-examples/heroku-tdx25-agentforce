@@ -4,7 +4,6 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.server.ResponseStatusException;
@@ -15,7 +14,10 @@ import com.sforce.soap.partner.sobject.SObject;
 import com.sforce.ws.ConnectionException;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 
@@ -35,10 +37,23 @@ public class CarbonFootprintService {
     private static final String BUSINESS = "Business";
     private static final String FIRST_CLASS = "FirstClass";
 
-    @Operation(summary = "Calculate Carbon Footprint", description = "Calculates the carbon footprint for a given flight using real DEFRA 2023 factors and live Salesforce passenger data.")
+    @Operation(
+        summary = "Calculate Carbon Footprint",
+        description = "Calculates the carbon footprint for a given flight using real DEFRA 2023 factors and live Salesforce passenger data.",
+        responses = {
+            @ApiResponse(responseCode = "200", description = "Response containing the carbon footprint summary for the flight."),
+            @ApiResponse(responseCode = "404", description = "Flight not found in Salesforce."),
+            @ApiResponse(responseCode = "503", description = "Salesforce connection error."),
+            @ApiResponse(responseCode = "500", description = "Unexpected server error.")
+        })
     @PostMapping("/calculateCarbonFootprint")
     public CarbonFootprintResponse calculateCarbonFootprint(
-            @RequestBody CarbonFootprintRequest request, HttpServletRequest httpServletRequest) {
+        @org.springframework.web.bind.annotation.RequestBody
+        @RequestBody(
+            description = "Request to calculate the carbon footprint of a flight, using its Salesforce record ID.", 
+            content = @Content(schema = @Schema(implementation = CarbonFootprintRequest.class))
+        ) CarbonFootprintRequest request,
+        HttpServletRequest httpServletRequest) {
 
         logger.info("Processing carbon footprint calculation for Flight ID: {}", request.flightId);
 
