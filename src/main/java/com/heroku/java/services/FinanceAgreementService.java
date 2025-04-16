@@ -192,6 +192,7 @@ public class FinanceAgreementService {
         table.addCell(new Cell().add(new Paragraph(value).setFont(regularFont)).setBorder(Border.NO_BORDER));
     }
     
+    @Schema(description = "Request to compute a finance agreement for a car purchase, including the Salesforce record ID of both the customer applying for financing and the vehicle being financed.")
     public static class FinanceCalculationRequest {
         @Schema(example = "0035g00000XyZbHAZ", description = "The Salesforce record ID of the customer applying for financing.")
         public String customerId;
