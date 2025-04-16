@@ -43,6 +43,8 @@ paths:
       description: Calculates the shipping options for a product given external data.
       operationId: calculateShippingOptions
       requestBody:
+        description: "Request to determine shipping options for a product, including\
+          \ the Salesforce record ID of the product being shipped."
         content:
           application/json:
             schema:
