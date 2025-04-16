@@ -52,7 +52,7 @@ paths:
         required: true
       responses:
         "200":
-          description: OK
+          description: Response containing the calculated shipping options.
           content:
             '*/*':
               schema:

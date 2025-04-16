@@ -4,6 +4,7 @@ import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
+import io.swagger.v3.oas.annotations.responses.ApiResponse;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
@@ -23,7 +24,13 @@ public class ShippingOptionsService {
 
     private static final Logger logger = LoggerFactory.getLogger(ShippingOptionsService.class);
 
-    @Operation(summary = "Calculate Shipping Options", description = "Calculates the shipping options for a product given external data.")
+    @Operation(
+        summary = "Calculate Shipping Options",
+        description = "Calculates the shipping options for a product given external data.",
+        responses = {
+            @ApiResponse(responseCode = "200", description = "Response containing the calculated shipping options.")
+        }
+    )
     @PostMapping("/calculateShippingOptions")
     public CalculateShippingOptionsResponse calculateShippingOptions(
             @org.springframework.web.bind.annotation.RequestBody
