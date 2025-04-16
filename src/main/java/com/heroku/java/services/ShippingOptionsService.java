@@ -1,7 +1,9 @@
 package com.heroku.java.services;
 
 import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.media.Content;
 import io.swagger.v3.oas.annotations.media.Schema;
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.servlet.http.HttpServletRequest;
 import org.slf4j.Logger;
@@ -24,7 +26,12 @@ public class ShippingOptionsService {
     @Operation(summary = "Calculate Shipping Options", description = "Calculates the shipping options for a product given external data.")
     @PostMapping("/calculateShippingOptions")
     public CalculateShippingOptionsResponse calculateShippingOptions(
-            @RequestBody CalculateShippingOptionsRequest request, HttpServletRequest httpServletRequest) {
+            @org.springframework.web.bind.annotation.RequestBody
+            @RequestBody(
+                description = "Request to determine shipping options for a product, including the Salesforce record ID of the product being shipped.",
+                content = @Content(schema = @Schema(implementation = CalculateShippingOptionsRequest.class))
+            ) CalculateShippingOptionsRequest request,
+            HttpServletRequest httpServletRequest) {
         logger.info("Processing shipping options calculation for product: {}", request.productId);
         // Mocked Response Data
         CalculateShippingOptionsResponse response = new CalculateShippingOptionsResponse();
