@@ -1,13 +1,15 @@
 # TDX25 - Supercharging Agentforce with Heroku
 
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=[https://github.com/heroku/node-js-getting-started](https://github.com/heroku-examples/heroku-tdx25-agentforce)
+
 > [!IMPORTANT]
-> This repository contains several enhanced versions of the Heroku services used during TDX'25 Mini Hacks, and also as demonstrated in a subsequent Salesforce Ben webinar. The code is shared primarily for browsing purposes. Since the TDX Mini Hack applications and objects have not yet been shared, deployment is not currently possible.
+> This repository contains several enhanced versions of the Heroku services used during TDX'25 Mini Hacks, and also as demonstrated in a subsequent Salesforce Ben webinar. The code is shared primarily for browsing or workshop purposes. Since the TDX Mini Hack applications and objects have not yet been shared, deployment is not currently possible.
 
 # Requirements
 - Heroku login
-- Heroku AppLink Pilot enabled
+- Heroku AppLink enabled
 - Heroku CLI installed
-- Heroku Integration Pilot CLI plugin is installed
+- Heroku Integration CLI plugin is installed
 - Salesforce CLI installed
 - Salesforce Org containing TDX'25 Mini Hack apps
 - Watch the [Introduction to the Heroku AppLink Pilot for Developers](https://www.youtube.com/watch?v=T5kOGNuTCLE) video 
