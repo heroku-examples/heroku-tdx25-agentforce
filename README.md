@@ -1,6 +1,6 @@
 # TDX25 - Supercharging Agentforce with Heroku
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=[https://github.com/heroku/node-js-getting-started](https://github.com/heroku-examples/heroku-tdx25-agentforce)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/heroku-examples/heroku-tdx25-agentforce)
 
 > [!IMPORTANT]
 > This repository contains several enhanced versions of the Heroku services used during TDX'25 Mini Hacks, and also as demonstrated in a subsequent Salesforce Ben webinar. The code is shared primarily for browsing or workshop purposes. Since the TDX Mini Hack applications and objects have not yet been shared, deployment is not currently possible.
