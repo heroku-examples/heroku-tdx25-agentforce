@@ -1,0 +1,62 @@
+{
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Color" : {
+      "title" : "Color",
+      "description" : "Color of the car such as Silver, White, Red, Green, Blue, Orange, etc.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Has_Cruise_Control" : {
+      "title" : "Has_Cruise_Control",
+      "description" : "Shows if the car is equipped with cruise control.",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Has_Heated_Seats" : {
+      "title" : "Has_Heated_Seats",
+      "description" : "Shows if the car is equipped with Heated Seats.",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Has_Sunroof" : {
+      "title" : "Has_Sunroof",
+      "description" : "Shows if the car has Sunroof",
+      "lightning:type" : "lightning__booleanType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Make" : {
+      "title" : "Make",
+      "description" : "The manufacturer of the car.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Model" : {
+      "title" : "Model",
+      "description" : "The Model of the car.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Status" : {
+      "title" : "Status",
+      "description" : "Holds the status of the car such a Available, Sold, or In Service.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "Transmission" : {
+      "title" : "Transmission",
+      "description" : "Transmission mechanism of the car such as Manual or Automatic.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

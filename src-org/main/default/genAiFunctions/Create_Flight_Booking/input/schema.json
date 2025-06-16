@@ -1,0 +1,35 @@
+{
+  "required" : [ "bookingClass", "contactId", "flightId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "bookingClass" : {
+      "title" : "Booking Class",
+      "description" : "Class of the booking. (Economy, Business, First Class)",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "contactId" : {
+      "title" : "Contact ID",
+      "description" : "18 digit Salesforce ID of the contact for whom flight must be booked.",
+      "lightning:type" : "lightning__recordIdType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "flightId" : {
+      "title" : "Flight ID",
+      "description" : "18 digit Salesforce ID of the flight for which seats need to be booked.",
+      "lightning:type" : "lightning__recordIdType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "mealPref" : {
+      "title" : "Meal Preference",
+      "description" : "Preferred meal of the passenger. (Vegetarian,Non-Vegetarian, Vegan, Diabetic, No Meal)",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

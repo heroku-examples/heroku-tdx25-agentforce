@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <description>Helps users search for the flights and make their flight bookings.</description>
+    <developerName>Travel_Agent</developerName>
+    <genAiFunctions>
+        <functionName>Create_Flight_Booking</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Customer_Details_by_Email</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Retrieve_Flights_by_Route</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Change_Flight_Booking</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Flight_Checkin_Flow</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Calculate_Carbon_Footprint</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>When a customer asks for flight information, prompt them for the source and destination. Then, provide a list of available flights.</description>
+        <developerName>instruction_whenacusto0</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_whenacusto0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the user specifies a date, display flights only if they are available on that date. If the flights are not available on that date, don&apos;t show the list.</description>
+        <developerName>instruction_iftheusers1</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_iftheusers1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Use the Retrieve Flights by Route action to fetch the flight list.</description>
+        <developerName>instruction_usetheretr2</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_usetheretr2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>You can also consider the Origin Airport Code for the source and the Destination Airport Code for the destination.</description>
+        <developerName>instruction_youcanalso3</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_youcanalso3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If you need to create a booking ask for customer email to locate contact information and use get customer details by email action. You can use create flight booking action to book the flight ticket. Get flightid from the selected flight.</description>
+        <developerName>instruction_ifyouneedt4</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifyouneedt4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If a customer wants to change their flight, use only the &quot;ChangeFlightBooking&quot; action to process the request. First ask for the PNR. Retrieve the booking details and display all the available flights for the origin and destination in the booking record.  Exclude the currently booked flight from the list. Allow the customer to select a new flight from the available options.</description>
+        <developerName>instruction_ifacustome5</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifacustome5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If Customer wants to checkin, first ask for pnr and use Flight Checkin Flow action to complete the checkin process.</description>
+        <developerName>instruction_ifcustomer6</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_ifcustomer6</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Ask for Meal Preference only if the checkin window is open.</description>
+        <developerName>instruction_askformeal7</developerName>
+        <language xsi:nil="true"/>
+        <masterLabel>instruction_askformeal7</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Travel Agent</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to search for the flights and create the booking on customers request or acceptance.</scope>
+</GenAiPlugin>

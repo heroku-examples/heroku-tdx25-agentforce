@@ -1,0 +1,21 @@
+{
+  "required" : [ "newFlightNumber", "pnr" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "newFlightNumber" : {
+      "title" : "New Flight Number",
+      "description" : "The flight number of the new flight the passenger wants to switch to.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "pnr" : {
+      "title" : "PNR",
+      "description" : "The Passenger Name Record (PNR) associated with the existing booking.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

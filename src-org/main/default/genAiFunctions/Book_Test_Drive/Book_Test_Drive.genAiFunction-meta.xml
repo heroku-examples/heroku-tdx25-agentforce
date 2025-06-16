@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Creates a new Test Drive record for a customer and vehicle with a scheduled date.</description>
+    <invocationTarget>BookTestDrive</invocationTarget>
+    <invocationTargetType>apex</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <masterLabel>Book Test Drive</masterLabel>
+</GenAiFunction>

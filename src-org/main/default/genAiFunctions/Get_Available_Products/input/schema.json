@@ -1,0 +1,14 @@
+{
+  "required" : [ "productType" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "productType" : {
+      "title" : "productType",
+      "description" : "Type of product we are searching for. Values are Apparel, Purses and Bags, Accessories or Shoes",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

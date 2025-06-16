@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Make__c</fullName>
+    <label>Make</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Zig</fullName>
+                <default>false</default>
+                <label>Zig</label>
+            </value>
+            <value>
+                <fullName>Flo</fullName>
+                <default>false</default>
+                <label>Flo</label>
+            </value>
+            <value>
+                <fullName>Koa</fullName>
+                <default>false</default>
+                <label>Koa</label>
+            </value>
+            <value>
+                <fullName>Max</fullName>
+                <default>false</default>
+                <label>Max</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

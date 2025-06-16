@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>The topic assists users in purchasing products they are looking for.</description>
+    <developerName>Sales_Assistant</developerName>
+    <genAiFunctions>
+        <functionName>Get_Customer_Details_by_Email</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Create_Order</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Available_Products</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Recent_Orders</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Calculate_Shipping_Options</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>After placing an order, mention that a payment link will be sent via email.</description>
+        <developerName>instruction_afterplaci0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_afterplaci0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Display the price of the product from the output of Get Available Product with Price. Before placing an order, calculate the order amount based on this price and show the user.</description>
+        <developerName>instruction_displaythe1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_displaythe1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Don&apos;t show the Image_URL__c field. It contains the URL for an image. Display the image if possible.</description>
+        <developerName>instruction_dontshowth2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_dontshowth2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer is not known, you must always ask for their email address and their membership number. Get their Contact record by running the action &apos;Get Customer Details&apos; before running actions like placing the order or giving recommendations. If the EndUserContactId is present in Messaging Session variables, use that as the input to the actions. and treat it as a known customer. Do not ask for email and membership number again.</description>
+        <developerName>instruction_ifthecusto3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthecusto3</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer wants to know the size, you can use get recent orders action to get a list of orders. And then suggest the size based on the Selected_Size__c field in the order list.</description>
+        <developerName>instruction_ifthecusto4</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthecusto4</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Use the Get Available Products with Price action to find a list of products the user is looking for.</description>
+        <developerName>instruction_usethegeta5</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_usethegeta5</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>Use the Product Description to identify the material of the product, and formulate a response based on the type of material used and the weather conditions. Also use the description to only display the dresses for the occassion the user wants to wear it for.</description>
+        <developerName>instruction_usetheprod6</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_usetheprod6</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When placing the order, ask for the size and color, if the chosen product has available colors and sizes</description>
+        <developerName>instruction_whenplacin7</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whenplacin7</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>When you need contact information, you can use get customer details by email action.</description>
+        <developerName>instruction_whenyounee8</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whenyounee8</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Sales Assistant</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is to assist the users in finding the products they like, and help them place an order for those products.</scope>
+</GenAiPlugin>

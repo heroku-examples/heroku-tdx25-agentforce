@@ -1,0 +1,14 @@
+{
+  "required" : [ "varPnr" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varPnr" : {
+      "title" : "varPnr",
+      "description" : "The pnr used to retrieve the flight booking record.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

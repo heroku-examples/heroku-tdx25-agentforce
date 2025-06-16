@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>CalculateCarbonFootprint</name>
+        <label>Calculate Carbon Footprint</label>
+        <locationX>176</locationX>
+        <locationY>242</locationY>
+        <actionName>ActionsService.calculateCarbonFootprint</actionName>
+        <actionType>externalService</actionType>
+        <connector>
+            <targetReference>Carbon_Footprint</targetReference>
+        </connector>
+        <flowTransactionModel>Automatic</flowTransactionModel>
+        <inputParameters>
+            <name>body</name>
+            <value>
+                <elementReference>request</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>ActionsService.calculateCarbonFootprint</nameSegment>
+        <offset>0</offset>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </actionCalls>
+    <apiVersion>63.0</apiVersion>
+    <assignments>
+        <name>Assign_record_Id</name>
+        <label>Assign record Id</label>
+        <locationX>176</locationX>
+        <locationY>134</locationY>
+        <assignmentItems>
+            <assignToReference>request.flightId</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <elementReference>recordId</elementReference>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>CalculateCarbonFootprint</targetReference>
+        </connector>
+    </assignments>
+    <environments>Default</environments>
+    <interviewLabel>DisplayEmissions {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Display Carbon Emissions</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Flow</processType>
+    <screens>
+        <name>Carbon_Footprint</name>
+        <label>Carbon Footprint</label>
+        <locationX>176</locationX>
+        <locationY>350</locationY>
+        <allowBack>true</allowBack>
+        <allowFinish>true</allowFinish>
+        <allowPause>true</allowPause>
+        <fields>
+            <name>CarbonFootprintLabel</name>
+            <fieldText>&lt;p&gt;&lt;strong&gt;Carbon Footprint Assessment:&lt;/strong&gt;&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <fields>
+            <name>CarbonFootprintValue</name>
+            <fieldText>&lt;ul&gt;&lt;li&gt;Total CO2 Emissions: {!CalculateCarbonFootprint.200.emissions.totalCo2Kg} kg Co2e&lt;/li&gt;&lt;li&gt;CO2 Emissions per Passenger: {!CalculateCarbonFootprint.200.emissions.co2PerPassengerKg} kg CO2e&lt;/li&gt;&lt;li&gt;CO2 Emissions per Kilometer: {!CalculateCarbonFootprint.200.emissions.co2PerKmKg} kg CO2e&lt;/li&gt;&lt;/ul&gt;&lt;p&gt;This calculation is based on the {!CalculateCarbonFootprint.200.methodology.calculationBasis} and {!CalculateCarbonFootprint.200.methodology.dataSource} factors.&lt;/p&gt;</fieldText>
+            <fieldType>DisplayText</fieldType>
+        </fields>
+        <showFooter>false</showFooter>
+        <showHeader>false</showHeader>
+    </screens>
+    <start>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Assign_record_Id</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <name>recordId</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <name>request</name>
+        <apexClass>herokuapplink__ActionsService_CarbonFootprintRequest</apexClass>
+        <dataType>Apex</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

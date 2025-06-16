@@ -1,0 +1,35 @@
+{
+  "required" : [ "CustomerId", "TestDriveDate", "VehicleId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "CustomerId" : {
+      "title" : "Customer ID",
+      "description" : "The ID of the Customer who is booking the test drive.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "SalesAgentId" : {
+      "title" : "Sales Agent ID",
+      "description" : "(Optional) The ID of the Sales Agent handling the test drive booking.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "TestDriveDate" : {
+      "title" : "Test Drive Date",
+      "description" : "The date and time when the test drive is scheduled.",
+      "lightning:type" : "lightning__dateTimeStringType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "VehicleId" : {
+      "title" : "Vehicle ID",
+      "description" : "The ID of the Vehicle for which the test drive is being scheduled.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

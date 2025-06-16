@@ -1,0 +1,35 @@
+{
+  "required" : [ "contactId", "selectedProductId" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "contactId" : {
+      "title" : "contactId",
+      "description" : "18 digit Salesforce ID of the contact for whom order must be placed.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "selectedColor" : {
+      "title" : "selectedColor",
+      "description" : "If applicable, selected color of the product.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "selectedProductId" : {
+      "title" : "selectedProductId",
+      "description" : "18 digit Salesforce ID of the product that needs to be ordered.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "selectedSize" : {
+      "title" : "selectedSize",
+      "description" : "If applicable, selected size of the product.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiFunction xmlns="http://soap.sforce.com/2006/04/metadata">
+    <description>Calculates the shipping options for a product given external data.</description>
+    <invocationTarget>ActionsService.calculateShippingOptions</invocationTarget>
+    <invocationTargetType>externalService</invocationTargetType>
+    <isConfirmationRequired>false</isConfirmationRequired>
+    <masterLabel>Calculate Shipping Options</masterLabel>
+</GenAiFunction>

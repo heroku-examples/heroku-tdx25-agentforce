@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>63.0</apiVersion>
+    <assignments>
+        <description>Checkin at airport message.</description>
+        <name>Checkin_at_airport_assignment</name>
+        <label>Checkin at airport assignment</label>
+        <locationX>578</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>Checkin_Status_Message</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Online checkin is closed. Please checkin at airport.</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Checkin is not yet open.</description>
+        <name>Checkin_not_opened_assignment</name>
+        <label>Checkin not opened assignment</label>
+        <locationX>314</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>Checkin_Status_Message</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>You can not checkin now. Checkin opens 48 hours before departure</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <description>Check in is Successfull</description>
+        <name>Checkin_Success_Message_Assignment</name>
+        <label>Checkin Success Message Assignment</label>
+        <locationX>50</locationX>
+        <locationY>566</locationY>
+        <assignmentItems>
+            <assignToReference>Checkin_Status_Message</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>Checkin is successful for {!varPnr} with {!varMealPreference}.</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <assignments>
+        <name>Past_Flight_Checkin_Message_Assignent</name>
+        <label>Past Flight Checkin Message Assignent</label>
+        <locationX>842</locationX>
+        <locationY>350</locationY>
+        <assignmentItems>
+            <assignToReference>Checkin_Status_Message</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>The flight had already departed</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <decisions>
+        <description>Check if the booking is within the checkin window</description>
+        <name>Check_Checkin_Window</name>
+        <label>Check Checkin Window</label>
+        <locationX>248</locationX>
+        <locationY>350</locationY>
+        <defaultConnector>
+            <targetReference>Is_Checkin_Open</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Is outside checkin wndow</defaultConnectorLabel>
+        <rules>
+            <name>Is_within_checkin_window</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CurrentDateTime</leftValueReference>
+                <operator>GreaterThan</operator>
+                <rightValue>
+                    <elementReference>Find_Booking_by_PNR.Flight__r.CheckIn_Window_Start__c</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>CurrentDateTime</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>Find_Booking_by_PNR.Flight__r.CheckIn_Window_End__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Update_Record_with_Checkin_Status</targetReference>
+            </connector>
+            <label>Is within checkin window</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Check if checkin is open</description>
+        <name>Is_Checkin_Open</name>
+        <label>Is Checkin Open</label>
+        <locationX>446</locationX>
+        <locationY>458</locationY>
+        <defaultConnector>
+            <targetReference>Checkin_at_airport_assignment</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Late Checkin</defaultConnectorLabel>
+        <rules>
+            <name>Checkin_not_opened</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CurrentDateTime</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>Find_Booking_by_PNR.Flight__r.CheckIn_Window_Start__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Checkin_not_opened_assignment</targetReference>
+            </connector>
+            <label>Checkin not opened</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <description>Is the flight in future date?</description>
+        <name>Is_Flight_in_Future</name>
+        <label>Is Flight in Future</label>
+        <locationX>545</locationX>
+        <locationY>242</locationY>
+        <defaultConnector>
+            <targetReference>Past_Flight_Checkin_Message_Assignent</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Past Flight</defaultConnectorLabel>
+        <rules>
+            <name>Flight_is_in_Future_Date</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>CurrentDateTime</leftValueReference>
+                <operator>LessThan</operator>
+                <rightValue>
+                    <elementReference>Find_Booking_by_PNR.Flight__r.Departure_Time__c</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Check_Checkin_Window</targetReference>
+            </connector>
+            <label>Flight is in Future Date</label>
+        </rules>
+    </decisions>
+    <description>Process flow to checkin to the flight.</description>
+    <environments>Default</environments>
+    <formulas>
+        <description>Current date and time</description>
+        <name>CurrentDateTime</name>
+        <dataType>DateTime</dataType>
+        <expression>NOW()</expression>
+    </formulas>
+    <interviewLabel>Flight Checkin Flow {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Flight Checkin Flow</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Finds the booking record by using the PNR.</description>
+        <name>Find_Booking_by_PNR</name>
+        <label>Find Booking by PNR</label>
+        <locationX>545</locationX>
+        <locationY>134</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <connector>
+            <targetReference>Is_Flight_in_Future</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>PNR__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>varPnr</elementReference>
+            </value>
+        </filters>
+        <getFirstRecordOnly>true</getFirstRecordOnly>
+        <object>Booking__c</object>
+        <storeOutputAutomatically>true</storeOutputAutomatically>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update the record with checkin status and meal preference.</description>
+        <name>Update_Record_with_Checkin_Status</name>
+        <label>Update Record with Checkin Status</label>
+        <locationX>50</locationX>
+        <locationY>458</locationY>
+        <connector>
+            <targetReference>Checkin_Success_Message_Assignment</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Find_Booking_by_PNR.Id</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Checkin_Status__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <inputAssignments>
+            <field>Meal_Preference__c</field>
+            <value>
+                <elementReference>varMealPreference</elementReference>
+            </value>
+        </inputAssignments>
+        <object>Booking__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>419</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Find_Booking_by_PNR</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>Checkin Status Message</description>
+        <name>Checkin_Status_Message</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>The Meal preference of the Customer (Vegetarian, Non-Vegetarian, Vegan, Diabetic, No Meal)</description>
+        <name>varMealPreference</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>The PNR of the flight booking record.</description>
+        <name>varPnr</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+</Flow>

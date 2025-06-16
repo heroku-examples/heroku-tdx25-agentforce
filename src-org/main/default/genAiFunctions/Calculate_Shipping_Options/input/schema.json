@@ -1,0 +1,14 @@
+{
+  "required" : [ "body" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "body" : {
+      "title" : "Body",
+      "description" : "Request to determine shipping options for a product, including the Salesforce record ID of the product being shipped.",
+      "lightning:type" : "@apexClassType/herokuapplink__ActionsService_CalculateShippingOptionsRequest?isAuraEnabled=true",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

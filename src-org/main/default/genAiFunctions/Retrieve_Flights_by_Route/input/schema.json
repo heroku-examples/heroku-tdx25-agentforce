@@ -1,0 +1,21 @@
+{
+  "required" : [ "varDestination", "varOrigin" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varDestination" : {
+      "title" : "varDestination",
+      "description" : "The destination we are planning to travel to.\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varOrigin" : {
+      "title" : "varOrigin",
+      "description" : "The source from where we planning to fly from.\n",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

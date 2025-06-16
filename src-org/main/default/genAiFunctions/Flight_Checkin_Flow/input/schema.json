@@ -1,0 +1,21 @@
+{
+  "required" : [ "varPnr" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "varMealPreference" : {
+      "title" : "varMealPreference",
+      "description" : "The Meal preference of the Customer (Vegetarian, Non-Vegetarian, Vegan, Diabetic, No Meal)",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    },
+    "varPnr" : {
+      "title" : "varPnr",
+      "description" : "The PNR of the flight booking record.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

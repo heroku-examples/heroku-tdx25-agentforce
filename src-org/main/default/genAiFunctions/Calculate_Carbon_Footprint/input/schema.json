@@ -1,0 +1,14 @@
+{
+  "required" : [ "body" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "body" : {
+      "title" : "Body",
+      "description" : "Request to calculate the carbon footprint of a flight, using its Salesforce record ID.",
+      "lightning:type" : "@apexClassType/herokuapplink__ActionsService_CarbonFootprintRequest?isAuraEnabled=true",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}
