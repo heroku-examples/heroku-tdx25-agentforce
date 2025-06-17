@@ -33,13 +33,14 @@ public class SalesforceClientContextFilter extends OncePerRequestFilter {
         try {
             // Decode the base64 header value and parse the JSON
             String decodedClientContext = new String(Base64.getDecoder().decode(encodedClientContext), StandardCharsets.UTF_8);
+            logger.info("Decoded header " + decodedClientContext);
             ObjectMapper objectMapper = new ObjectMapper();
             JsonNode clientContextNode = objectMapper.readTree(decodedClientContext);
             // Extract fields to hydrate a UserContext and WSC PartnerConnection on the request
             String accessToken = clientContextNode.get("accessToken").asText();
             String apiVersion = clientContextNode.get("apiVersion").asText();
             String requestId = clientContextNode.get("requestId").asText();
-            // String namespace = clientContextNode.get("namespace").asText();
+            String namespace = null; // clientContextNode.get("namespace").asText();
             String orgId = clientContextNode.get("orgId").asText();
             String orgDomainUrl = clientContextNode.get("orgDomainUrl").asText();
             logger.info("Got info accessToken:{} also orgDomainURL: {}", accessToken, orgDomainUrl);
