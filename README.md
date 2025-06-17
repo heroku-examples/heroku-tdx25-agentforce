@@ -70,17 +70,30 @@ To test from Apex, Flow and other tools within your Salesforce org you must depl
 
 ```
 heroku create
+heroku buildpacks:add --index=1 heroku/heroku-applink-service-mesh
+heroku buildpacks:add heroku/java
+heroku config:set HEROKU_APP_ID="$(heroku apps:info --json | jq -r '.app.id')"
 git push heroku main
+heroku addons:create heroku-applink
+heroku salesforce:connect my-org
+heroku salesforce:publish api-docs.yaml --client-name ActionsService --connection-name my-org --authorization-connected-app-name ActionsServiceConnectedApp --authorization-permission-set-name ActionsServicePermissions
 ```
 
-Next install and configure the Heroku Integration add-on:
+**INTERNAL ONLY**: For internal GA testing only
 
 ```
-heroku addons:create heroku-integration
-heroku buildpacks:add https://github.com/heroku/heroku-buildpack-heroku-integration-service-mesh
-heroku salesforce:connect my-org --store-as-run-as-user
-heroku salesforce:import api-docs.yaml --org-name my-org --client-name ActionsService
+heroku create
+heroku buildpacks:add --index=1 heroku/heroku-applink-service-mesh
+heroku buildpacks:add heroku/java
+heroku config:set HEROKU_APP_ID="$(heroku apps:info --json | jq -r '.app.id')"
+git push heroku main
+export HEROKU_APPLINK_ADDON=heroku-applink-staging
+heroku addons:create heroku-applink-staging:test
+heroku addons:attach $(heroku addons --json | jq -r '.[] | select(.addon_service.name == "heroku-applink-staging") | .name') --as HEROKU_APPLINK
+heroku salesforce:connect my-org --login-url https://login.test1.pc-rnd.salesforce.com
+heroku salesforce:publish api-docs.yaml --client-name ActionsService --connection-name my-org --authorization-connected-app-name ActionsServiceConnectedApp --authorization-permission-set-name ActionsServicePermissions
 ```
+
 
 Trigger an application rebuild to install the Heroku Integration buildpack
 

@@ -21,6 +21,11 @@ paths:
       - Services for Managing Social Cards for Marketing Campaigns
       summary: Renders a custom social card for marketing campaigns.
       operationId: renderCard
+      x-sfdc:
+        heroku:
+          authorization:
+            connectedApp: 'ActionsServiceConnectedApp'
+            permissionSet: 'ActionsServicePermissions'      
       requestBody:
         description: Use the line1 and line2 properites to customize
         content:
@@ -42,6 +47,11 @@ paths:
       summary: Calculate Shipping Options
       description: Calculates the shipping options for a product given external data.
       operationId: calculateShippingOptions
+      x-sfdc:
+        heroku:
+          authorization:
+            connectedApp: 'ActionsServiceConnectedApp'
+            permissionSet: 'ActionsServicePermissions'      
       requestBody:
         description: "Request to determine shipping options for a product, including\
           \ the Salesforce record ID of the product being shipped."
@@ -65,6 +75,11 @@ paths:
       description: "Processes a finance agreement based on car valuation, customer\
         \ credit profile, business margin constraints, and competitor pricing."
       operationId: calculateFinanceAgreement
+      x-sfdc:
+        heroku:
+          authorization:
+            connectedApp: 'ActionsServiceConnectedApp'
+            permissionSet: 'ActionsServicePermissions'      
       requestBody:
         description: "Request to compute a finance agreement for a car purchase, including\
           \ the Salesforce record ID of both the customer applying for financing and\
@@ -107,6 +122,11 @@ paths:
       description: Calculates the carbon footprint for a given flight using real DEFRA
         2023 factors and live Salesforce passenger data.
       operationId: calculateCarbonFootprint
+      x-sfdc:
+        heroku:
+          authorization:
+            connectedApp: 'ActionsServiceConnectedApp'
+            permissionSet: 'ActionsServicePermissions'      
       requestBody:
         description: "Request to calculate the carbon footprint of a flight, using\
           \ its Salesforce record ID."
