@@ -1,0 +1,14 @@
+[
+    {
+        "sobject": "Order",
+        "files": [
+            "Order.json"
+        ]
+    },
+    {
+        "sobject": "OrderItem",
+        "files": [
+            "OrderItem.json"
+        ]
+    }
+]

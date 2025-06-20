@@ -1,0 +1,208 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef1"
+            },
+            "Name": "V-00001",
+            "Make__c": "Zig",
+            "Model__c": "M1",
+            "Year__c": "2024",
+            "Price__c": 24000,
+            "Fuel_Type__c": "Petrol",
+            "Transmission__c": "Manual",
+            "Has_Autonomous_Driving__c": false,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": false,
+            "Has_Sunroof__c": false
+        },
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef2"
+            },
+            "Name": "V-00002",
+            "Make__c": "Zig",
+            "Model__c": "M2",
+            "Year__c": "2024",
+            "Price__c": 33288,
+            "Fuel_Type__c": "Petrol",
+            "Transmission__c": "Manual",
+            "Has_Autonomous_Driving__c": false,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": false,
+            "Has_Sunroof__c": true
+        },
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef3"
+            },
+            "Name": "V-00003",
+            "Make__c": "Zig",
+            "Model__c": "M3",
+            "Year__c": "2024",
+            "Price__c": 38250,
+            "Fuel_Type__c": "Petrol",
+            "Transmission__c": "Automatic",
+            "Has_Autonomous_Driving__c": false,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": false,
+            "Has_Sunroof__c": true
+        },
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef4"
+            },
+            "Name": "V-00004",
+            "Make__c": "Zig",
+            "Model__c": "M4",
+            "Year__c": "2025",
+            "Price__c": 42000,
+            "Fuel_Type__c": "Hybrid",
+            "Transmission__c": "Automatic",
+            "Has_Autonomous_Driving__c": true,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": true,
+            "Has_Sunroof__c": true
+        },
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef5"
+            },
+            "Name": "V-00005",
+            "Make__c": "Flo",
+            "Model__c": "Rover",
+            "Year__c": "2024",
+            "Price__c": 22000,
+            "Fuel_Type__c": "Petrol",
+            "Transmission__c": "Manual",
+            "Has_Autonomous_Driving__c": false,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": false,
+            "Has_Sunroof__c": false
+        },
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef6"
+            },
+            "Name": "V-00006",
+            "Make__c": "Flo",
+            "Model__c": "Summit",
+            "Year__c": "2024",
+            "Price__c": 27000,
+            "Fuel_Type__c": "Petrol",
+            "Transmission__c": "Manual",
+            "Has_Autonomous_Driving__c": false,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": false,
+            "Has_Sunroof__c": true
+        },
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef7"
+            },
+            "Name": "V-00007",
+            "Make__c": "Flo",
+            "Model__c": "Everest",
+            "Year__c": "2025",
+            "Price__c": 32000,
+            "Fuel_Type__c": "Petrol",
+            "Transmission__c": "Manual",
+            "Has_Autonomous_Driving__c": false,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": true,
+            "Has_Sunroof__c": true
+        },
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef8"
+            },
+            "Name": "V-00008",
+            "Make__c": "Flo",
+            "Model__c": "Volt",
+            "Year__c": "2025",
+            "Price__c": 40292,
+            "Fuel_Type__c": "Petrol",
+            "Transmission__c": "Automatic",
+            "Has_Autonomous_Driving__c": true,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": true,
+            "Has_Sunroof__c": true
+        },
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef9"
+            },
+            "Name": "V-00009",
+            "Make__c": "Max",
+            "Model__c": "Lumina",
+            "Year__c": "2024",
+            "Price__c": 29120,
+            "Fuel_Type__c": "Petrol",
+            "Transmission__c": "Manual",
+            "Has_Autonomous_Driving__c": false,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": false,
+            "Has_Sunroof__c": false
+        },
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef10"
+            },
+            "Name": "V-00010",
+            "Make__c": "Max",
+            "Model__c": "Leo",
+            "Year__c": "2024",
+            "Price__c": 34152,
+            "Fuel_Type__c": "Petrol",
+            "Transmission__c": "Manual",
+            "Has_Autonomous_Driving__c": false,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": false,
+            "Has_Sunroof__c": true
+        },
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef11"
+            },
+            "Name": "V-00011",
+            "Make__c": "Max",
+            "Model__c": "Pulse",
+            "Year__c": "2025",
+            "Price__c": 39226,
+            "Fuel_Type__c": "Petrol",
+            "Transmission__c": "Manual",
+            "Has_Autonomous_Driving__c": false,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": true,
+            "Has_Sunroof__c": true
+        },
+        {
+            "attributes": {
+                "type": "Vehicle_Model__c",
+                "referenceId": "Vehicle_Model__cRef12"
+            },
+            "Name": "V-00012",
+            "Make__c": "Max",
+            "Model__c": "Prestige",
+            "Year__c": "2025",
+            "Price__c": 49292,
+            "Fuel_Type__c": "Petrol",
+            "Transmission__c": "Automatic",
+            "Has_Autonomous_Driving__c": true,
+            "Has_Cruise_Control__c": true,
+            "Has_Heated_Seats__c": true,
+            "Has_Sunroof__c": true
+        }
+    ]
+}

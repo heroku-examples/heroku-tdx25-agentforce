@@ -3,23 +3,32 @@
 [![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://www.heroku.com/deploy?template=https://github.com/heroku-examples/heroku-tdx25-agentforce)
 
 > [!IMPORTANT]
-> This repository contains several enhanced versions of the Heroku services used during TDX'25 Mini Hacks, and also as demonstrated in a subsequent Salesforce Ben webinar. The code is shared primarily for browsing or workshop purposes. Since the TDX Mini Hack applications and objects have not yet been shared, deployment is not currently possible.
+> If you are taking part in a Heroku Workshop please continue to refer to instructions provided.
 
 # Requirements
 - Heroku login
-- Heroku AppLink enabled
 - Heroku CLI installed
-- Heroku Integration CLI plugin is installed
+- Heroku AppLink CLI plugin installed
 - Salesforce CLI installed
-- Salesforce Org containing TDX'25 Mini Hack apps
-- Watch the [Introduction to the Heroku AppLink Pilot for Developers](https://www.youtube.com/watch?v=T5kOGNuTCLE) video 
+- Salesforce Org with Agentforce enabled
+
+## Org Setup
+
+If you are not taking part in a Heroku Workshop you will need your own Salesforce org such as a Sanbdox, Developer Edition or Scratch org. To use the actions in this repository you will need some objects, data and Agentforce agents.
+
+```
+sf org login web --alias my-org
+sf project deploy start
+sf data tree import --plan ./data/master-plan.json
+```
+
+Login to your org and confirm you can see the **Koa Cars** application and tabs, such as **Vehicles** with data.
 
 ## Local Development and Testing
 
 Code invoked from Salesforce requires specific HTTP headers to connect back to the invoking Salesforce org. Using the `invoke.sh` script supplied with this sample, it is possible to simulate requests from Salesforce with the correct headers, enabling you to develop and test locally before deploying to test from Apex, Flow, or Agentforce. This sample leverages the `sf` CLI to allow the `invoke.sh` script to access org authentication details. Run the following commands to locally authenticate, build and run the sample:
 
 ```
-sf org login web --alias my-org
 mvn clean install
 mvn spring-boot:run
 ```
@@ -64,9 +73,9 @@ Response from server:
 ......MeoNeW4V3qGEqQiI3B1GdvmhQ4eyMNXiaG9RwlTYBqkxw40gUlhDCVOhiECUMBWKCEQJU6GIQJQwFYoIRAlToYhAlDAVighECVOhiECUMBWKCEQJU6GIQJQwFYoIRAlToYhAlDAVighECVOhiECUMBWKCEQJU6GIQJQwFYoIRAlToYhAlDAVighECVOhiED+DwdSYalU9//OAAAAAElFTkSuQmCC"}
 ```
 
-## Deploying and Testing from Apex and Flow
+## Deploying and Testing from Apex
 
-To test from Apex, Flow and other tools within your Salesforce org you must deploy the code and import it into your org. The following commands create a Heroku application and configure the Heroku Integration add-on. This add-on and associated buildpack allows secure authenticated access from within your code and visibility of your code from Apex, Flow and Agentforce. After this configuration, code is not accessible from the public internet, only from within an authorized Salesforce org.
+To test from Apex, Flow and other tools within your Salesforce org you must deploy the code and publish it into your org. The following commands create a Heroku application and configure the Heroku AppLink add-on. This add-on and associated buildpack allows secure authenticated access from within your code and visibility of your code from Apex, Flow and Agentforce. After this configuration, code is not accessible from the public internet, only from within an authorized Salesforce org.
 
 ```
 heroku create
@@ -93,14 +102,6 @@ heroku addons:create heroku-applink-staging:test --wait
 heroku addons:attach $(heroku addons --json | jq -r '.[] | select(.addon_service.name == "heroku-applink-staging") | .name') --as HEROKU_APPLINK
 heroku salesforce:connect my-org --login-url https://login.test1.pc-rnd.salesforce.com
 heroku salesforce:publish api-docs.yaml --client-name ActionsService --connection-name my-org --authorization-connected-app-name ActionsServiceConnectedApp --authorization-permission-set-name ActionsServicePermissions
-```
-
-
-Trigger an application rebuild to install the Heroku Integration buildpack
-
-```
-git commit --allow-empty -m "empty commit"
-git push heroku main
 ```
 
 Once imported grant permissions to users to invoke your code using the following `sf` command:
@@ -138,3 +139,7 @@ Inspect the debug log output sent to to the console and you should see the gener
 ```
 07:56:11.212 (3213672014)|USER_DEBUG|[1]|DEBUG|Final Car Price:41800
 ```
+
+## Deploying and Testing from Agentforce
+
+Complete the steps above to test from Apex. After this Agents and actions will have been deployed to your org. For instructions on how to interact with those agents, such as the Koa Cars agent, please refer to the workshop Agent testing steps [here](https://workshops-content.ukoreh.com/applink-agentforce/heroku-applink.html), ignore all other setup steps.

@@ -1,0 +1,72 @@
+{
+    "objects": [
+        {
+            "name": "Account",
+            "planFile": "Account-plan.json",
+            "dataFile": "Account.json"
+        },
+        {
+            "name": "Contact",
+            "planFile": "Contact-plan.json",
+            "dataFile": "Contact.json",
+            "dependsOn": ["Account"]
+        },
+        {
+            "name": "Product2",
+            "planFile": "Product2-plan.json",
+            "dataFile": "Product2.json"
+        },
+        {
+            "name": "Pricebook2",
+            "planFile": "Pricebook2-PricebookEntry-plan.json",
+            "dataFile": "Pricebook2.json",
+            "dependsOn": ["Product2"]
+        },
+        {
+            "name": "PricebookEntry",
+            "planFile": "Pricebook2-PricebookEntry-plan.json",
+            "dataFile": "PricebookEntry.json",
+            "dependsOn": ["Pricebook2", "Product2"]
+        },
+        {
+            "name": "Vehicle_Model__c",
+            "planFile": "Vehicle_Model__c-plan.json",
+            "dataFile": "Vehicle_Model__c.json"
+        },
+        {
+            "name": "Case",
+            "planFile": "Case-plan.json",
+            "dataFile": "Case.json",
+            "dependsOn": ["Account", "Contact"]
+        },
+        {
+            "name": "Test_Drive__c",
+            "planFile": "Test_Drive__c-plan.json",
+            "dataFile": "Test_Drive__c.json",
+            "dependsOn": ["Contact", "Vehicle_Model__c"]
+        },
+        {
+            "name": "Flight__c",
+            "planFile": "Flight__c-plan.json",
+            "dataFile": "Flight__c.json"
+        },
+        {
+            "name": "Booking__c",
+            "planFile": "Booking__c-plan.json",
+            "dataFile": "Booking__c.json",
+            "dependsOn": ["Contact", "Flight__c"]
+        },
+        {
+            "name": "Order",
+            "planFile": "Order-OrderItem-plan.json",
+            "dataFile": "Order.json",
+            "dependsOn": ["PricebookEntry", "Account", "Contact"]
+        },
+        {
+            "name": "OrderItem",
+            "planFile": "Order-OrderItem-plan.json",
+            "dataFile": "OrderItem.json",
+            "dependsOn": ["Order", "PricebookEntry"]
+        }
+    ]
+} 

@@ -1,0 +1,153 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "OrderItem",
+                "referenceId": "OrderItemRef1"
+            },
+            "Selected_Size__c": "Large",
+            "PricebookEntryId": "01uKZ000008HCl7YAG",
+            "PricebookEntry": {
+                "attributes": {
+                    "type": "PricebookEntry",
+                    "url": "/services/data/v63.0/sobjects/PricebookEntry/01uKZ000008HCl7YAG"
+                },
+                "Name": "Fleece Jacket",
+                "Product2Id": "01tKZ000001J9c1YAC",
+                "Product2": {
+                    "attributes": {
+                        "type": "Product2",
+                        "url": "/services/data/v63.0/sobjects/Product2/01tKZ000001J9c1YAC"
+                    },
+                    "Name": "Fleece Jacket",
+                    "Description": "Featuring a zip-up front, cozy pockets, and a relaxed fit, it’s a versatile piece for outdoor activities or casual everyday wear. Runs a size smaller.",
+                    "ProductCode": "APRL00678"
+                },
+                "UnitPrice": 280
+            },
+            "Quantity": 1,
+            "UnitPrice": 280,
+            "TotalPrice": 280,
+            "OrderId": "@OrderRef1"
+        },
+        {
+            "attributes": {
+                "type": "OrderItem",
+                "referenceId": "OrderItemRef2"
+            },
+            "PricebookEntryId": "01uKZ000008HCl4YAG",
+            "PricebookEntry": {
+                "attributes": {
+                    "type": "PricebookEntry",
+                    "url": "/services/data/v63.0/sobjects/PricebookEntry/01uKZ000008HCl4YAG"
+                },
+                "Name": "Printed Clutch",
+                "Product2Id": "01tKZ000001J9c8YAC",
+                "Product2": {
+                    "attributes": {
+                        "type": "Product2",
+                        "url": "/services/data/v63.0/sobjects/Product2/01tKZ000001J9c8YAC"
+                    },
+                    "Name": "Printed Clutch",
+                    "Description": "A stylish leather clutch made with brass handles and a woolen strap",
+                    "ProductCode": "PB916BW"
+                },
+                "UnitPrice": 350
+            },
+            "Quantity": 1,
+            "UnitPrice": 350,
+            "TotalPrice": 350,
+            "OrderId": "@OrderRef2"
+        },
+        {
+            "attributes": {
+                "type": "OrderItem",
+                "referenceId": "OrderItemRef3"
+            },
+            "Selected_Size__c": "Medium",
+            "PricebookEntryId": "01uKZ000008HClCYAW",
+            "PricebookEntry": {
+                "attributes": {
+                    "type": "PricebookEntry",
+                    "url": "/services/data/v63.0/sobjects/PricebookEntry/01uKZ000008HClCYAW"
+                },
+                "Name": "Sequined Maxi Dress",
+                "Product2Id": "01tKZ000001J9c3YAC",
+                "Product2": {
+                    "attributes": {
+                        "type": "Product2",
+                        "url": "/services/data/v63.0/sobjects/Product2/01tKZ000001J9c3YAC"
+                    },
+                    "Name": "Sequined Maxi Dress",
+                    "Description": "Full-length maxi silhouette that creates a graceful and elongated look. Made from polyester mesh with all-over sequins, providing a sparkling, high-quality finish. Fully lined with soft satin or polyester fabric for comfort and smooth wear. Ideal for parties",
+                    "ProductCode": "APRL19624"
+                },
+                "UnitPrice": 380
+            },
+            "Quantity": 1,
+            "UnitPrice": 380,
+            "TotalPrice": 380,
+            "OrderId": "@OrderRef3"
+        },
+        {
+            "attributes": {
+                "type": "OrderItem",
+                "referenceId": "OrderItemRef4"
+            },
+            "Selected_Size__c": "Medium",
+            "PricebookEntryId": "01uKZ000008HCl3YAG",
+            "PricebookEntry": {
+                "attributes": {
+                    "type": "PricebookEntry",
+                    "url": "/services/data/v63.0/sobjects/PricebookEntry/01uKZ000008HCl3YAG"
+                },
+                "Name": "Sleeveless Neck Top and Skirt",
+                "Product2Id": "01tKZ000001J9c6YAC",
+                "Product2": {
+                    "attributes": {
+                        "type": "Product2",
+                        "url": "/services/data/v63.0/sobjects/Product2/01tKZ000001J9c6YAC"
+                    },
+                    "Name": "Sleeveless Neck Top and Skirt",
+                    "Description": "A sleek sleeveless design with a flattering round neckline. Made with 100% polyester, offering a lightweight, wrinkle-resistant fabric with a smooth finish.",
+                    "ProductCode": "APRL91824"
+                },
+                "UnitPrice": 125
+            },
+            "Quantity": 1,
+            "UnitPrice": 125,
+            "TotalPrice": 125,
+            "OrderId": "@OrderRef4"
+        },
+        {
+            "attributes": {
+                "type": "OrderItem",
+                "referenceId": "OrderItemRef5"
+            },
+            "Selected_Size__c": "Large",
+            "PricebookEntryId": "01uKZ000008HCl7YAG",
+            "PricebookEntry": {
+                "attributes": {
+                    "type": "PricebookEntry",
+                    "url": "/services/data/v63.0/sobjects/PricebookEntry/01uKZ000008HCl7YAG"
+                },
+                "Name": "Fleece Jacket",
+                "Product2Id": "01tKZ000001J9c1YAC",
+                "Product2": {
+                    "attributes": {
+                        "type": "Product2",
+                        "url": "/services/data/v63.0/sobjects/Product2/01tKZ000001J9c1YAC"
+                    },
+                    "Name": "Fleece Jacket",
+                    "Description": "Featuring a zip-up front, cozy pockets, and a relaxed fit, it’s a versatile piece for outdoor activities or casual everyday wear. Runs a size smaller.",
+                    "ProductCode": "APRL00678"
+                },
+                "UnitPrice": 280
+            },
+            "Quantity": 1,
+            "UnitPrice": 280,
+            "TotalPrice": 280,
+            "OrderId": "@OrderRef4"
+        }
+    ]
+}

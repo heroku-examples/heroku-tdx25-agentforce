@@ -1,0 +1,67 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef1"
+            },
+            "Name": "Sample Account for Entitlements"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef2"
+            },
+            "Name": "Global Media",
+            "Type": "Prospect",
+            "BillingStreet": "150 Chestnut Street",
+            "BillingCity": "Toronto",
+            "BillingState": "Ontario",
+            "BillingPostalCode": "L4B 1Y3",
+            "BillingCountry": "Canada",
+            "Phone": "(905) 555-1212"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef3"
+            },
+            "Name": "Acme",
+            "Type": "Prospect",
+            "BillingStreet": "10 Main Rd.",
+            "BillingCity": "New York",
+            "BillingState": "NY",
+            "BillingPostalCode": "31349",
+            "BillingCountry": "USA",
+            "Phone": "(212) 555-5555"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef4"
+            },
+            "Name": "salesforce.com",
+            "Type": "Customer",
+            "BillingStreet": "The Landmark @ One Market, Suite 300",
+            "BillingCity": "San Francisco",
+            "BillingState": "CA",
+            "BillingPostalCode": "94105",
+            "BillingCountry": "USA",
+            "Phone": "(415) 901-7000"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef5"
+            },
+            "Name": "Neha Singh Household"
+        },
+        {
+            "attributes": {
+                "type": "Account",
+                "referenceId": "AccountRef6"
+            },
+            "Name": "John HouseHold"
+        }
+    ]
+}

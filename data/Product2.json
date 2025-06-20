@@ -1,0 +1,125 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref1"
+            },
+            "Name": "Textured Satchel Bag",
+            "Description": "Crafted from high-quality materials with a unique textured finish, it features a structured shape, a spacious interior, and sturdy handles. With a detachable shoulder strap for versatility, this satchel adds a chic touch to any outfit while offering practicality for everyday use.",
+            "ProductCode": "PB762GH",
+            "IsActive": true,
+            "Family": "Purses and Bags"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref2"
+            },
+            "Name": "Handmade Tote Bag",
+            "Description": "Made from durable, high-quality materials, it offers ample space for daily essentials. With its sturdy handles and chic design, this tote is perfect for both casual outings and more polished looks.",
+            "ProductCode": "PB0163JU",
+            "IsActive": true,
+            "Family": "Purses and Bags"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref3"
+            },
+            "Name": "Glitter Bodycon",
+            "Description": "Made from a blend of polyester and spandex, ensuring stretch for a comfortable fit and a sleek finish. A scoop neck, high neck, or sweetheart neckline for added allure. The perfect party wear dress.",
+            "ProductCode": "APRL012754",
+            "IsActive": true,
+            "Family": "Apparel"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref4"
+            },
+            "Name": "Fleece Jacket",
+            "Description": "Featuring a zip-up front, cozy pockets, and a relaxed fit, it’s a versatile piece for outdoor activities or casual everyday wear. Runs a size smaller.",
+            "ProductCode": "APRL00678",
+            "IsActive": true,
+            "Family": "Apparel"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref5"
+            },
+            "Name": "Windcheater Puffer Jacket",
+            "Description": "Designed for ultimate warmth, it features a quilted, lightweight design, water-resistant fabric, and a snug hood. Perfect for temperatures -10 degrees celcius to 5 degrees celcius.",
+            "ProductCode": "APRL96126",
+            "IsActive": true,
+            "Family": "Apparel"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref6"
+            },
+            "Name": "Sequined Maxi Dress",
+            "Description": "Full-length maxi silhouette that creates a graceful and elongated look. Made from polyester mesh with all-over sequins, providing a sparkling, high-quality finish. Fully lined with soft satin or polyester fabric for comfort and smooth wear. Ideal for parties",
+            "ProductCode": "APRL19624",
+            "IsActive": true,
+            "Family": "Apparel"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref7"
+            },
+            "Name": "Vintage Printed Long Dress",
+            "Description": "A floor-length silhouette crafted from 100% rayon or cotton blend with Smooth, wrinkle-resistant finish",
+            "ProductCode": "APRL76124",
+            "IsActive": true,
+            "Family": "Apparel"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref8"
+            },
+            "Name": "Floral Dress",
+            "Description": "Intricate floral prints in vibrant tones made with a blend of cotton and linen.",
+            "ProductCode": "APRL19845",
+            "IsActive": true,
+            "Family": "Apparel"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref9"
+            },
+            "Name": "Sleeveless Neck Top and Skirt",
+            "Description": "A sleek sleeveless design with a flattering round neckline. Made with 100% polyester, offering a lightweight, wrinkle-resistant fabric with a smooth finish.",
+            "ProductCode": "APRL91824",
+            "IsActive": true,
+            "Family": "Apparel"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref10"
+            },
+            "Name": "Full Sleeve Long Line Overcoat",
+            "Description": "Full-length sleeves with buttoned cuffs for added elegance and warmth. Made from 65% wool and 35% polyester, offering a perfect balance of warmth, durability, and a soft texture.",
+            "ProductCode": "APRL58612",
+            "IsActive": true,
+            "Family": "Apparel"
+        },
+        {
+            "attributes": {
+                "type": "Product2",
+                "referenceId": "Product2Ref11"
+            },
+            "Name": "Printed Clutch",
+            "Description": "A stylish leather clutch made with brass handles and a woolen strap",
+            "ProductCode": "PB916BW",
+            "IsActive": true,
+            "Family": "Purses and Bags"
+        }
+    ]
+}

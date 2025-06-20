@@ -1,0 +1,14 @@
+[
+    {
+        "sobject": "Pricebook2",
+        "files": [
+            "Pricebook2.json"
+        ]
+    },
+    {
+        "sobject": "PricebookEntry",
+        "files": [
+            "PricebookEntry.json"
+        ]
+    }
+]

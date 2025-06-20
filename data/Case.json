@@ -1,0 +1,60 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef1"
+            },
+            "CaseNumber": "00001003",
+            "Subject": "Activity 5: Implement Service Cloud",
+            "Description": "Access additional information and best practices to implement Service Cloud.",
+            "Status": "New",
+            "Priority": "Medium",
+            "Origin": "Phone"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef2"
+            },
+            "CaseNumber": "00001008",
+            "Subject": "Activity 2: Collaborate on a Case",
+            "Description": "Learn how Service Cloud allows agents to easily collaborate on cases.",
+            "Status": "New",
+            "Priority": "Medium"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef3"
+            },
+            "CaseNumber": "00001004",
+            "Subject": "Activity 4: Configure Service Cloud",
+            "Description": "Learn how to make configuration changes to Service Cloud in order to adapt it to your business needs.",
+            "Status": "New",
+            "Priority": "Medium"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef4"
+            },
+            "CaseNumber": "00001005",
+            "Subject": "Activity 3: View Service Reports and Dashboards",
+            "Description": "Learn how to monitor key customer service metrics.",
+            "Status": "New",
+            "Priority": "Medium"
+        },
+        {
+            "attributes": {
+                "type": "Case",
+                "referenceId": "CaseRef5"
+            },
+            "CaseNumber": "00001009",
+            "Subject": "Activity 1: Resolve a Case",
+            "Description": "Learn how to solve customer service cases with Service Cloud.",
+            "Status": "New",
+            "Priority": "Medium"
+        }
+    ]
+}

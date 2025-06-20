@@ -1,0 +1,15 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Test_Drive__c",
+                "referenceId": "Test_Drive__cRef1"
+            },
+            "Name": "TD-00000",
+            "Customer__c": "003KZ00000CQrIZYA1",
+            "Vehicle__c": "a04KZ0000008hCwYAI",
+            "Test_Drive_Date__c": "2025-02-19T06:30:00.000+0000",
+            "Status__c": "Cancelled"
+        }
+    ]
+}

@@ -1,0 +1,42 @@
+{
+    "records": [
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef1"
+            },
+            "Name": "AA-0000002",
+            "PNR__c": "QCCGNB",
+            "Contact__c": "003KZ00000CQrIaYAL",
+            "Flight__c": "a02KZ000002I8bJYAS",
+            "Class__c": "Economy",
+            "Checkin_Status__c": "Not Checked-In"
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef2"
+            },
+            "Name": "AA-0000000",
+            "PNR__c": "HDU681",
+            "Contact__c": "003KZ00000CQrIZYA1",
+            "Flight__c": "a02KZ000002I8bFYAS",
+            "Class__c": "Economy",
+            "Meal_Preference__c": "No Meal",
+            "Checkin_Status__c": "Not Checked-In"
+        },
+        {
+            "attributes": {
+                "type": "Booking__c",
+                "referenceId": "Booking__cRef3"
+            },
+            "Name": "AA-0000001",
+            "PNR__c": "YIU657",
+            "Contact__c": "003KZ00000CQrIVYA1",
+            "Flight__c": "a02KZ000002I8bGYAS",
+            "Class__c": "Business",
+            "Meal_Preference__c": "Vegetarian",
+            "Checkin_Status__c": "Not Checked-In"
+        }
+    ]
+}
