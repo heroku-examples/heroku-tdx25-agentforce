@@ -89,21 +89,6 @@ heroku salesforce:connect my-org
 heroku salesforce:publish api-docs.yaml --client-name ActionsService --connection-name my-org --authorization-connected-app-name ActionsServiceConnectedApp --authorization-permission-set-name ActionsServicePermissions
 ```
 
-**INTERNAL ONLY**: For internal GA testing only
-
-```
-heroku create
-heroku buildpacks:add --index=1 heroku/heroku-applink-service-mesh
-heroku buildpacks:add heroku/java
-heroku config:set HEROKU_APP_ID="$(heroku apps:info --json | jq -r '.app.id')"
-git push heroku main
-export HEROKU_APPLINK_ADDON=heroku-applink-staging
-heroku addons:create heroku-applink-staging:test --wait
-heroku addons:attach $(heroku addons --json | jq -r '.[] | select(.addon_service.name == "heroku-applink-staging") | .name') --as HEROKU_APPLINK
-heroku salesforce:connect my-org --login-url https://login.test1.pc-rnd.salesforce.com
-heroku salesforce:publish api-docs.yaml --client-name ActionsService --connection-name my-org --authorization-connected-app-name ActionsServiceConnectedApp --authorization-permission-set-name ActionsServicePermissions
-```
-
 Once imported grant permissions to users to invoke your code using the following `sf` command:
 
 ```
