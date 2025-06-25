@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <canEscalate>false</canEscalate>
+    <description>Respond to request to provide finance agreements for vehicles</description>
+    <developerName>Car_Finance_Estimates</developerName>
+    <genAiFunctions>
+        <functionName>Calculate_Finance_Agreement</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>When asked for a finance estimate use the calculate finance agreement action</description>
+        <developerName>instruction_whenaskedf0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_whenaskedf0</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Car Finance Estimates</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>You can generate finance agreements for vehicles</scope>
+</GenAiPlugin>

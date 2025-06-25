@@ -4,5 +4,6 @@
     <invocationTarget>FlightBookingService</invocationTarget>
     <invocationTargetType>apex</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Create Flight Booking</masterLabel>
 </GenAiFunction>

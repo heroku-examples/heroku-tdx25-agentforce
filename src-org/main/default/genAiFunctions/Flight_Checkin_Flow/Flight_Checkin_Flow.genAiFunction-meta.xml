@@ -4,5 +4,6 @@
     <invocationTarget>Flight_Checkin_Flow</invocationTarget>
     <invocationTargetType>flow</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Flight Checkin Flow</masterLabel>
 </GenAiFunction>

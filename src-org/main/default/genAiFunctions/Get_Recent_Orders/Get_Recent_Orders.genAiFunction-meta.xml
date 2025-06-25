@@ -4,5 +4,6 @@
     <invocationTarget>GetRecentOrders</invocationTarget>
     <invocationTargetType>apex</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Get Recent Orders</masterLabel>
 </GenAiFunction>

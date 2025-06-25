@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
     <description>The topic assists users in purchasing products they are looking for.</description>
     <developerName>Sales_Assistant</developerName>
     <genAiFunctions>

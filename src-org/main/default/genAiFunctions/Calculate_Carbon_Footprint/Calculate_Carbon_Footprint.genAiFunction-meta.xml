@@ -4,5 +4,6 @@
     <invocationTarget>ActionsService.calculateCarbonFootprint</invocationTarget>
     <invocationTargetType>externalService</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Calculate Carbon Footprint</masterLabel>
 </GenAiFunction>

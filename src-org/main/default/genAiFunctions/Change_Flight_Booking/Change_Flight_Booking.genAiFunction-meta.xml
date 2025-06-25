@@ -4,5 +4,6 @@
     <invocationTarget>ChangeFlightBooking</invocationTarget>
     <invocationTargetType>apex</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Change Flight Booking</masterLabel>
 </GenAiFunction>

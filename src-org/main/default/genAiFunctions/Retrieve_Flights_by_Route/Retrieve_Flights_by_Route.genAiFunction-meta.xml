@@ -4,5 +4,6 @@
     <invocationTarget>Retrieve_Flights_by_Route</invocationTarget>
     <invocationTargetType>flow</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Retrieve Flights by Route</masterLabel>
 </GenAiFunction>

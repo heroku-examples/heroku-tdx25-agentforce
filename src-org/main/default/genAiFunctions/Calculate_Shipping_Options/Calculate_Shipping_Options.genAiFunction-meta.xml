@@ -4,5 +4,6 @@
     <invocationTarget>ActionsService.calculateShippingOptions</invocationTarget>
     <invocationTargetType>externalService</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Calculate Shipping Options</masterLabel>
 </GenAiFunction>

@@ -4,5 +4,6 @@
     <invocationTarget>CreateOrder</invocationTarget>
     <invocationTargetType>apex</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Create Order</masterLabel>
 </GenAiFunction>

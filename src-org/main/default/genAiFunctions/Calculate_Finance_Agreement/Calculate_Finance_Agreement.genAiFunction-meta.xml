@@ -4,5 +4,6 @@
     <invocationTarget>ActionsService.calculateFinanceAgreement</invocationTarget>
     <invocationTargetType>externalService</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Calculate Finance Agreement</masterLabel>
 </GenAiFunction>

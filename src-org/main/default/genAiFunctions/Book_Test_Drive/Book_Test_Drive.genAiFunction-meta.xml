@@ -4,5 +4,6 @@
     <invocationTarget>BookTestDrive</invocationTarget>
     <invocationTargetType>apex</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Book Test Drive</masterLabel>
 </GenAiFunction>

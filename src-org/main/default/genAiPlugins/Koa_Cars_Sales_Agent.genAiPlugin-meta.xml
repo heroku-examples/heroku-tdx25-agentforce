@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
     <description>Helps customers search for the cars, book the test drive and provides finance agreement estimates.</description>
     <developerName>Koa_Cars_Sales_Agent</developerName>
     <genAiFunctions>

@@ -4,5 +4,6 @@
     <invocationTarget>CheckWeather</invocationTarget>
     <invocationTargetType>apex</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Check Weather</masterLabel>
 </GenAiFunction>

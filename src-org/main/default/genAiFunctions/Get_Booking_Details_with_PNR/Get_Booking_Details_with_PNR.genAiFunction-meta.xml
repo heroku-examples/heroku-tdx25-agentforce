@@ -4,5 +4,6 @@
     <invocationTarget>Get_Booking_Details_with_PNR</invocationTarget>
     <invocationTargetType>flow</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Get Booking Details with PNR</masterLabel>
 </GenAiFunction>

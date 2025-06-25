@@ -4,5 +4,6 @@
     <invocationTarget>Get_Vehicle_List</invocationTarget>
     <invocationTargetType>flow</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Get Vehicle List</masterLabel>
 </GenAiFunction>

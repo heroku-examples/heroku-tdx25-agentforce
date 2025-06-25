@@ -4,5 +4,6 @@
     <invocationTarget>Get_Available_Products</invocationTarget>
     <invocationTargetType>flow</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Get Available Products</masterLabel>
 </GenAiFunction>

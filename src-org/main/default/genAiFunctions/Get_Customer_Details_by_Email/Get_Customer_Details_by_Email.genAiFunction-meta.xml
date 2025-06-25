@@ -4,5 +4,6 @@
     <invocationTarget>Get_Customer_Details_by_Email</invocationTarget>
     <invocationTargetType>flow</invocationTargetType>
     <isConfirmationRequired>false</isConfirmationRequired>
+    <isIncludeInProgressIndicator>false</isIncludeInProgressIndicator>
     <masterLabel>Get Customer Details by Email</masterLabel>
 </GenAiFunction>
