@@ -18,8 +18,9 @@ If you are not taking part in a Heroku Workshop you will need your own Salesforc
 
 ```
 sf org login web --alias my-org
-sf project deploy start
-sf data tree import --plan ./data/master-plan.json
+sf project deploy start -o my-org
+sf org assign permset --name HerokuAgentsApps -o my-org
+sf data tree import --plan ./data/master-plan.json -o my-org
 ```
 
 Login to your org and confirm you can see the **Koa Cars** application and tabs, such as **Vehicles** with data.

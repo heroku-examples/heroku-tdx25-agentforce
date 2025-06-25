@@ -18,9 +18,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 22,
             "Business_Price__c": 31,
-            "FirstClass_Price__c": 45,
-            "CheckIn_Window_Start__c": "2025-03-05T05:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-03-07T03:15:00.000+0000"
+            "FirstClass_Price__c": 45
         },
         {
             "attributes": {
@@ -40,9 +38,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 22,
             "Business_Price__c": 31,
-            "FirstClass_Price__c": 42,
-            "CheckIn_Window_Start__c": "2025-03-05T07:45:00.000+0000",
-            "CheckIn_Window_End__c": "2025-03-07T05:45:00.000+0000"
+            "FirstClass_Price__c": 42
         },
         {
             "attributes": {
@@ -62,9 +58,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 30,
             "Business_Price__c": 42,
-            "FirstClass_Price__c": 54,
-            "CheckIn_Window_Start__c": "2025-03-05T13:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-03-07T11:35:00.000+0000"
+            "FirstClass_Price__c": 54
         },
         {
             "attributes": {
@@ -84,9 +78,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 28,
             "Business_Price__c": 40,
-            "FirstClass_Price__c": 50,
-            "CheckIn_Window_Start__c": "2025-03-05T10:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-03-07T08:15:00.000+0000"
+            "FirstClass_Price__c": 50
         },
         {
             "attributes": {
@@ -106,9 +98,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 22,
             "Business_Price__c": 31,
-            "FirstClass_Price__c": 45,
-            "CheckIn_Window_Start__c": "2025-08-01T05:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-08-03T03:15:00.000+0000"
+            "FirstClass_Price__c": 45
         },
         {
             "attributes": {
@@ -128,9 +118,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 22,
             "Business_Price__c": 31,
-            "FirstClass_Price__c": 42,
-            "CheckIn_Window_Start__c": "2025-08-01T05:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-08-03T03:35:00.000+0000"
+            "FirstClass_Price__c": 42
         },
         {
             "attributes": {
@@ -150,9 +138,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 28,
             "Business_Price__c": 40,
-            "FirstClass_Price__c": 50,
-            "CheckIn_Window_Start__c": "2025-08-01T10:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-08-03T08:15:00.000+0000"
+            "FirstClass_Price__c": 50
         },
         {
             "attributes": {
@@ -172,9 +158,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 30,
             "Business_Price__c": 42,
-            "FirstClass_Price__c": 54,
-            "CheckIn_Window_Start__c": "2025-08-01T13:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-08-03T11:35:00.000+0000"
+            "FirstClass_Price__c": 54
         },
         {
             "attributes": {
@@ -194,9 +178,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 22,
             "Business_Price__c": 31,
-            "FirstClass_Price__c": 45,
-            "CheckIn_Window_Start__c": "2025-09-01T05:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-09-03T03:15:00.000+0000"
+            "FirstClass_Price__c": 45
         },
         {
             "attributes": {
@@ -216,9 +198,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 22,
             "Business_Price__c": 31,
-            "FirstClass_Price__c": 42,
-            "CheckIn_Window_Start__c": "2025-09-01T05:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-09-03T03:35:00.000+0000"
+            "FirstClass_Price__c": 42
         },
         {
             "attributes": {
@@ -238,9 +218,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 28,
             "Business_Price__c": 40,
-            "FirstClass_Price__c": 50,
-            "CheckIn_Window_Start__c": "2025-09-01T10:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-09-03T08:15:00.000+0000"
+            "FirstClass_Price__c": 50
         },
         {
             "attributes": {
@@ -260,9 +238,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 30,
             "Business_Price__c": 42,
-            "FirstClass_Price__c": 54,
-            "CheckIn_Window_Start__c": "2025-09-01T13:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-09-03T11:35:00.000+0000"
+            "FirstClass_Price__c": 54
         },
         {
             "attributes": {
@@ -282,9 +258,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 22,
             "Business_Price__c": 31,
-            "FirstClass_Price__c": 45,
-            "CheckIn_Window_Start__c": "2025-10-01T05:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-10-03T03:15:00.000+0000"
+            "FirstClass_Price__c": 45
         },
         {
             "attributes": {
@@ -304,9 +278,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 22,
             "Business_Price__c": 31,
-            "FirstClass_Price__c": 42,
-            "CheckIn_Window_Start__c": "2025-10-01T05:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-10-03T03:35:00.000+0000"
+            "FirstClass_Price__c": 42
         },
         {
             "attributes": {
@@ -326,9 +298,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 28,
             "Business_Price__c": 40,
-            "FirstClass_Price__c": 50,
-            "CheckIn_Window_Start__c": "2025-10-01T10:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-10-03T08:15:00.000+0000"
+            "FirstClass_Price__c": 50
         },
         {
             "attributes": {
@@ -348,9 +318,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 30,
             "Business_Price__c": 42,
-            "FirstClass_Price__c": 54,
-            "CheckIn_Window_Start__c": "2025-10-01T13:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-10-03T11:35:00.000+0000"
+            "FirstClass_Price__c": 54
         },
         {
             "attributes": {
@@ -370,9 +338,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 192,
             "Business_Price__c": 280,
-            "FirstClass_Price__c": 345,
-            "CheckIn_Window_Start__c": "2025-08-01T05:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-08-03T03:15:00.000+0000"
+            "FirstClass_Price__c": 345
         },
         {
             "attributes": {
@@ -392,9 +358,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 196,
             "Business_Price__c": 288,
-            "FirstClass_Price__c": 347,
-            "CheckIn_Window_Start__c": "2025-08-01T05:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-08-03T03:35:00.000+0000"
+            "FirstClass_Price__c": 347
         },
         {
             "attributes": {
@@ -414,9 +378,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 192,
             "Business_Price__c": 280,
-            "FirstClass_Price__c": 345,
-            "CheckIn_Window_Start__c": "2025-08-01T10:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-08-03T08:15:00.000+0000"
+            "FirstClass_Price__c": 345
         },
         {
             "attributes": {
@@ -436,9 +398,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 198,
             "Business_Price__c": 288,
-            "FirstClass_Price__c": 346,
-            "CheckIn_Window_Start__c": "2025-08-01T13:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-08-03T11:35:00.000+0000"
+            "FirstClass_Price__c": 346
         },
         {
             "attributes": {
@@ -458,9 +418,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 193,
             "Business_Price__c": 283,
-            "FirstClass_Price__c": 348,
-            "CheckIn_Window_Start__c": "2025-09-01T05:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-09-03T03:15:00.000+0000"
+            "FirstClass_Price__c": 348
         },
         {
             "attributes": {
@@ -480,9 +438,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 194,
             "Business_Price__c": 282,
-            "FirstClass_Price__c": 346,
-            "CheckIn_Window_Start__c": "2025-09-01T05:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-09-03T03:35:00.000+0000"
+            "FirstClass_Price__c": 346
         },
         {
             "attributes": {
@@ -502,9 +458,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 190,
             "Business_Price__c": 280,
-            "FirstClass_Price__c": 340,
-            "CheckIn_Window_Start__c": "2025-09-01T10:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-09-03T08:15:00.000+0000"
+            "FirstClass_Price__c": 340
         },
         {
             "attributes": {
@@ -524,9 +478,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 196,
             "Business_Price__c": 282,
-            "FirstClass_Price__c": 322,
-            "CheckIn_Window_Start__c": "2025-09-01T13:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-09-03T11:35:00.000+0000"
+            "FirstClass_Price__c": 322
         },
         {
             "attributes": {
@@ -546,9 +498,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 192,
             "Business_Price__c": 280,
-            "FirstClass_Price__c": 345,
-            "CheckIn_Window_Start__c": "2025-10-01T05:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-10-03T03:15:00.000+0000"
+            "FirstClass_Price__c": 345
         },
         {
             "attributes": {
@@ -568,9 +518,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 194,
             "Business_Price__c": 276,
-            "FirstClass_Price__c": 326,
-            "CheckIn_Window_Start__c": "2025-10-01T05:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-10-03T03:35:00.000+0000"
+            "FirstClass_Price__c": 326
         },
         {
             "attributes": {
@@ -590,9 +538,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 191,
             "Business_Price__c": 282,
-            "FirstClass_Price__c": 322,
-            "CheckIn_Window_Start__c": "2025-10-01T10:15:00.000+0000",
-            "CheckIn_Window_End__c": "2025-10-03T08:15:00.000+0000"
+            "FirstClass_Price__c": 322
         },
         {
             "attributes": {
@@ -612,9 +558,7 @@
             "Available_FirstClass_Seats__c": 8,
             "Economy_Price__c": 188,
             "Business_Price__c": 260,
-            "FirstClass_Price__c": 322,
-            "CheckIn_Window_Start__c": "2025-10-01T13:35:00.000+0000",
-            "CheckIn_Window_End__c": "2025-10-03T11:35:00.000+0000"
+            "FirstClass_Price__c": 322
         }
     ]
 }

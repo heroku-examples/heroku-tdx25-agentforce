@@ -30,9 +30,9 @@
             "Type": "Prospect",
             "BillingStreet": "10 Main Rd.",
             "BillingCity": "New York",
-            "BillingState": "NY",
+            "BillingState": "New York",
             "BillingPostalCode": "31349",
-            "BillingCountry": "USA",
+            "BillingCountry": "United States",
             "Phone": "(212) 555-5555"
         },
         {
@@ -44,9 +44,9 @@
             "Type": "Customer",
             "BillingStreet": "The Landmark @ One Market, Suite 300",
             "BillingCity": "San Francisco",
-            "BillingState": "CA",
+            "BillingState": "California",
             "BillingPostalCode": "94105",
-            "BillingCountry": "USA",
+            "BillingCountry": "United States",
             "Phone": "(415) 901-7000"
         },
         {
