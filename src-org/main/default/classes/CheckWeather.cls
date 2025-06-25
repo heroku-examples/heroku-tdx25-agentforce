@@ -10,13 +10,16 @@ public with sharing class CheckWeather {
         Datetime dateToCheck = (Datetime) requests[0].dateToCheck;
         String cityName = (String) requests[0].cityName;
 
+        /**
         WeatherService.Weather weather = WeatherService.getResortWeather(
             dateToCheck, cityName
         );
+         */
+        
         // Create the response for Agent
         WeatherResponse response = new WeatherResponse();
-        response.temperature = weather.temperature;
-        response.temperatureDescription = weather.description;
+        response.temperature = 50; // weather.temperature;
+        response.temperatureDescription = 'Its hot'; // weather.description;
         return new List<WeatherResponse>{ response };
     }
 

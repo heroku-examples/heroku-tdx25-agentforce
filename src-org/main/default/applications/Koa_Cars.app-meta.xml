@@ -2,8 +2,6 @@
 <CustomApplication xmlns="http://soap.sforce.com/2006/04/metadata">
     <brand>
         <headerColor>#0070D2</headerColor>
-        <logo>koa_cars</logo>
-        <logoVersion>1</logoVersion>
         <shouldOverrideOrgTheme>false</shouldOverrideOrgTheme>
     </brand>
     <formFactors>Small</formFactors>
@@ -20,5 +18,4 @@
     <tabs>standard-Case</tabs>
     <tabs>Test_Drive__c</tabs>
     <uiType>Lightning</uiType>
-    <utilityBar>Koa_Cars_UtilityBar</utilityBar>
 </CustomApplication>
