@@ -1,7 +1,7 @@
 // Generate campaign social card using Heroku app imported via AppLink
-ExternalService.ActionsService service = new ExternalService.ActionsService();
-ExternalService.ActionsService.renderCard_Request request = new ExternalService.ActionsService.renderCard_Request();
-request.body = new ExternalService.ActionsService_RenderCardRequest();
+HerokuAppLink.ActionsService service = new HerokuAppLink.ActionsService();
+HerokuAppLink.ActionsService.renderCard_Request request = new HerokuAppLink.ActionsService.renderCard_Request();
+request.body = new HerokuAppLink.ActionsService_RenderCardRequest();
 request.body.line1 = 'Supercharging Apex, Flow and';
 request.body.line2 = 'Agentforce with Heroku AppLink';
 String socialCardBase64 = service.renderCard(request).Code200.socialCard;

@@ -106,20 +106,36 @@ Navigate to your orgs **Setup** menu and search for **Heroku** then click **Apps
 
 ### Invoking from Apex
 
-Now that you have imported your Heroku application. The following shows an Apex code fragment the demonstrates how to invoke your code in an synchronous manner (waits for response).
+Now that you have imported your Heroku application lets invoke some of its actions.
+
+Run the following Apex code to invoke your code in an synchronous manner (waits for response).
+
+Be sure to edit the file to replace the record Ids for the Vehicle and Customer (Contact) with those from your org.
 
 ```
-echo \
-"ExternalService.ActionsService service = new ExternalService.ActionsService();" \
-"ExternalService.ActionsService.calculateFinanceAgreement_Request request = new ExternalService.ActionsService.calculateFinanceAgreement_Request();" \
-"ExternalService.ActionsService_FinanceCalculationRequest body = new ExternalService.ActionsService_FinanceCalculationRequest();" \
-"request.body = body;" \
-"request.body.vehicleId = 'a04Hs00002EMj9PIAT';" \
-"System.debug('Final Car Price: ' + service.calculateFinanceAgreement(request).Code200.recommendedFinanceOffer.finalCarPrice);" \
-| sf apex run -o my-org
+sf apex run < ./src-apex/CalculateFinanceAgreement.apex
 ```
 
-Inspect the debug log output sent to to the console and you should see the generated Quote ID output as follows:
+For reference the above file contains the following Apex code.
+
+```
+try {
+    HerokuAppLink.ActionsService service = new HerokuAppLink.ActionsService();
+    HerokuAppLink.ActionsService.calculateFinanceAgreement_Request request = new HerokuAppLink.ActionsService.calculateFinanceAgreement_Request();
+    HerokuAppLink.ActionsService_FinanceCalculationRequest body = new HerokuAppLink.ActionsService_FinanceCalculationRequest();
+    request.body = body;
+    request.body.vehicleId = 'a03bn00000OGFrqAAH';
+    request.body.customerId = '003bn00000OG8LsAAL';
+    request.body.downPayment = 1000;
+    request.body.maxInterestRate = 5.5;
+    request.body.years = 3;
+    System.debug('Final Car Price: ' + service.calculateFinanceAgreement(request).Code200.recommendedFinanceOffer.finalCarPrice);
+} catch (Exception e) {
+    System.debug(e.toString());
+}
+```
+
+Inspect the debug log output sent to to the console and you should see the generated price (the value will vary):
 
 ```
 07:56:11.212 (3213672014)|USER_DEBUG|[1]|DEBUG|Final Car Price:41800
